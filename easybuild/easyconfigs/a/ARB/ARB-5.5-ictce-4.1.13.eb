@@ -7,8 +7,8 @@ handling and data analysis. A central database of processed (aligned) sequences 
 to the respective sequence entries is structured according to phylogeny or other user defined criteria."""
 toolchain = {'name': 'ictce', 'version': '4.1.13'} # tweaked by EasyBuild (was: {'name': 'goolf', 'version': '1.4.10'})
 
-sources = ['%(name)ssrc.tgz']
-source_urls = ['http://download.arb-home.de/release/arb_%(version)s']
+# download from http://download.arb-home.de/release/arb_5.5, and rename to include version
+sources = ['%(namelower)s-%(version)s-src.tgz']
 
 patches = [
     '%(name)s-%(version)s_xmkmf.patch',
@@ -28,16 +28,12 @@ dependencies = [
     ('libXaw', '1.0.12'),
     ('Perl', '5.16.3'),
     ('libxslt', '1.1.28'),
-#TODO:
-    #xmllint
-    # optional
-    #('freeglut', '2.8.1'),
-    # currently fails, see https://github.com/hpcugent/easybuild-easyconfigs/issues/368
-    # but this is optional anyway
-    # sablotron
+    ('freeglut', '2.8.1'),
+    ('Sablotron', '1.0.3'),
+    ('libxml2', '2.9.1'),
 ]
-premakeopts = "export ARBHOME=$PWD && PATH=$ARBHOME/bin:$PATH && LD_LIBRARY_PATH=$ARBHOME/lib:$ARBHOME/LIBLINK:$LD_LIBRARY_PATH &&"
-makeopts = 'all OPENGL=0 V=1 ARB_64=1'  # no opengl support, verbose, 64bit support
-# makefile doesn't support parallel builds
-#parallel = 1
+
+# make sure GCC version check passes, use ARB script to get current GCC version as indicate it's an allowed version
+makeopts = 'GCC_VERSION_ALLOWED=`$ARBHOME/SOURCE_TOOLS/arb_gcc_version.pl`'
+
 moduleclass = 'bio'
