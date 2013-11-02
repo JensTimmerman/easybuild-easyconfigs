@@ -17,4 +17,6 @@ dependencies = [
     ('HarfBuzz', '0.9.14'),
 ]
 
+configopts = '--disable-shared'
+
 moduleclass = 'vis'
