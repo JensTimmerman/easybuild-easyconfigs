@@ -17,6 +17,7 @@ dependencies = [
     ('HarfBuzz', '0.9.14'),
 ]
 
+# disable building shared libs, required a -fPIC cairo (and thus GCC) build
 configopts = '--disable-shared'
 
 moduleclass = 'vis'
