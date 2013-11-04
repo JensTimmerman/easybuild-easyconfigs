@@ -237,4 +237,5 @@ exts_list = [
         'source_urls': ['http://cpan.metacpan.org/authors/id/P/PE/PEVANS'],
     }),
 ]
+
 moduleclass = 'lang'
