@@ -1,5 +1,5 @@
 name = 'HarfBuzz'
-version = "0.9.14"
+version = '0.9.14'
 
 homepage = 'http://www.freedesktop.org/wiki/Software/HarfBuzz'
 description = """HarfBuzz is an OpenType text shaping engine."""
@@ -14,5 +14,10 @@ dependencies = [
     ('freetype', '2.4.11'),
     ('GLib', '2.34.3'),
 ]
+
+sanity_check_paths = {                                                                                                   
+    'files': ["lib/libharfbuzz.so"],                                                                                             
+    'dirs': [""],                                                                                          
+}
 
 moduleclass = 'vis'
