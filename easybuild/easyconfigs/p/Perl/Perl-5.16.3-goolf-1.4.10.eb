@@ -236,6 +236,5 @@ exts_list = [
         'source_tmpl': 'B-LintSubs-0.06.tar.gz',
         'source_urls': ['http://cpan.metacpan.org/authors/id/P/PE/PEVANS'],
     }),
-
 ]
 moduleclass = 'lang'
