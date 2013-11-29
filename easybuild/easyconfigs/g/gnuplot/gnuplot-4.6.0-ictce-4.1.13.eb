@@ -19,7 +19,7 @@ description = """gnuplot-4.6.0: Portable interactive, function plotting utility"
 sources = [SOURCE_TAR_GZ]
 source_urls = [('http://sourceforge.net/projects/gnuplot/files', 'download')]
 
-toolchain = {'name': 'ictce', 'version': '4.1.13'} 
+toolchain = {'name': 'ictce', 'version': '4.1.13'}
 
 dependencies = [
     ('ncurses', '5.9'),
