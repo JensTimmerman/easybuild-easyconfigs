@@ -12,7 +12,7 @@ source_urls = ['http://cairographics.org/releases/']
 sources = ['%(name)s-%(version)s.tar.xz']
 
 dependencies = [
-    ('libpng', '1.5.14'),
+    ('libpng', '1.6.6'),
     ('freetype', '2.4.11'),
     ('zlib', '1.2.7'),
     ('pixman', '0.28.2'),

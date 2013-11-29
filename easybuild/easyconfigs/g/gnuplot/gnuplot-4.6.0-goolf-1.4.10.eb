@@ -26,6 +26,7 @@ dependencies = [
     ('libreadline', '6.2'),
     ('Pango', '1.34.0'),
     ('slang', '2.2.4'),
+    ('libgd', '2.1.0'),
 ]
 
 sanity_check_paths = {
