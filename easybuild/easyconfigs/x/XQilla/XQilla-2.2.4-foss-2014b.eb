@@ -14,7 +14,10 @@ dependencies = [
    ('xerces-c', '3.1.1'),
 ]
 
-patches = ['xqilla-gcc-4.6.patch']
+patches = [
+    'xqilla-gcc-4.6.patch',
+    'xqilla_createinstancenocheck.patch',
+    ]
 
 configopts = '--with-xerces=$EBROOTXERCESMINC'
 

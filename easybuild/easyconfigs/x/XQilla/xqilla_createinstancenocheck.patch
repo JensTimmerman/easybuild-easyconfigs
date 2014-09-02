@@ -1,0 +1,13 @@
+--- ../XQilla-2.2.4.orig/src/items/DatatypeFactoryTemplate.hpp	2014-09-02 14:04:54.510516672 +0200
++++ src/items/DatatypeFactoryTemplate.hpp	2014-09-02 14:05:34.614255280 +0200
+@@ -79,8 +79,8 @@
+   AnyAtomicType::Ptr createInstance(const XMLCh* value,
+                                     const DynamicContext* context) const
+   {
+-    return createInstanceNoCheck(DatatypeFactoryTemplate<TYPE>::getPrimitiveTypeURI(),
+-                                 DatatypeFactoryTemplate<TYPE>::getPrimitiveTypeName(), value, context);
++    return this->createInstanceNoCheck(DatatypeFactoryTemplate<TYPE>::getPrimitiveTypeURI(),
++                                       DatatypeFactoryTemplate<TYPE>::getPrimitiveTypeName(), value, context);
+   }
+ 
+   bool checkInstance(const XMLCh* value,
