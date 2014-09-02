@@ -1,0 +1,10 @@
+--- ./include/xqilla/framework/XPath2MemoryManager.hpp	2014-09-02 13:54:02.783480983 +0200
++++ ../XQilla-2.2.4.orig/./include/xqilla/framework/XPath2MemoryManager.hpp	2014-09-02 13:52:13.605702648 +0200
+@@ -24,6 +24,7 @@
+
+ #include <algorithm>
+ #include <assert.h>
++#include <cstddef>
+
+ #include <xqilla/framework/XQillaExport.hpp>
+

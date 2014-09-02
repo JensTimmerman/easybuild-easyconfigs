@@ -14,6 +14,8 @@ dependencies = [
    ('xerces-c', '3.1.1'),
 ]
 
+patches = ['xqilla-gcc-4.6.patch']
+
 configopts = '--with-xerces=$EBROOTXERCESMINC'
 
 sanity_check_paths = {
