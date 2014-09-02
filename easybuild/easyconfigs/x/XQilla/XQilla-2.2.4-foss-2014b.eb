@@ -22,7 +22,7 @@ patches = [
 configopts = '--with-xerces=$EBROOTXERCESMINC'
 
 sanity_check_paths = {
-    'files': ['lib/libxqilla.5.so'],
+    'files': ['lib/libxqilla.so.5'],
     'dirs': []
 }
 
